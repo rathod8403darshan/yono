@@ -55,13 +55,39 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Download Button Functionality
+    function handleDownload() {
+        // Add your download link here
+        // Replace 'your-download-link-here' with the actual APK download URL
+        const downloadUrl = 'your-download-link-here';
+        
+        // Option 1: Direct download
+        // window.location.href = downloadUrl;
+        
+        // Option 2: Open in new tab
+        // window.open(downloadUrl, '_blank');
+        
+        // Option 3: Show alert (current implementation)
+        alert('Download link will be added here. Please contact administrator for the APK download link.');
+        
+        // Option 4: Create download link programmatically
+        // const link = document.createElement('a');
+        // link.href = downloadUrl;
+        // link.download = 'YonoRummy.apk';
+        // document.body.appendChild(link);
+        // link.click();
+        // document.body.removeChild(link);
+    }
+    
+    // Hero section download button
     const downloadBtn = document.getElementById('downloadBtn');
     if (downloadBtn) {
-        downloadBtn.addEventListener('click', function() {
-            // Add your download link here
-            // window.location.href = 'your-download-link-here';
-            alert('Download link will be added here. Please contact administrator for the APK download link.');
-        });
+        downloadBtn.addEventListener('click', handleDownload);
+    }
+    
+    // Fixed download button (bottom center)
+    const fixedDownloadBtn = document.getElementById('fixedDownloadBtn');
+    if (fixedDownloadBtn) {
+        fixedDownloadBtn.addEventListener('click', handleDownload);
     }
     
     // Smooth scroll for anchor links

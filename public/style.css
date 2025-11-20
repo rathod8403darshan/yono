@@ -1246,6 +1246,124 @@ html {
     }
 }
 
+/* Fixed Download Button */
+.fixed-download-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fixed-download-btn {
+    background: var(--gradient-pink);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.4);
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+    min-width: 180px;
+    justify-content: center;
+}
+
+.fixed-download-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.fixed-download-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.fixed-download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 107, 157, 0.5);
+}
+
+.fixed-download-btn:active {
+    transform: translateY(-1px);
+}
+
+.download-icon {
+    font-size: 1.3rem;
+    position: relative;
+    z-index: 1;
+    animation: bounce 2s infinite;
+}
+
+.download-text {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsive for Fixed Download Button */
+@media (max-width: 768px) {
+    .fixed-download-container {
+        bottom: 15px;
+        left: 50%;
+        right: auto;
+        width: calc(100% - 40px);
+        max-width: 300px;
+    }
+
+    .fixed-download-btn {
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 0.9rem;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .fixed-download-container {
+        bottom: 10px;
+        width: calc(100% - 20px);
+        max-width: 280px;
+    }
+
+    .fixed-download-btn {
+        padding: 12px 20px;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+    }
+
+    .download-icon {
+        font-size: 1.1rem;
+    }
+}
+
 /* Print Styles */
 @media print {
     .header,
@@ -1253,7 +1371,8 @@ html {
     .download-btn,
     .cta-section,
     .breadcrumb,
-    .mobile-menu-toggle {
+    .mobile-menu-toggle,
+    .fixed-download-container {
         display: none;
     }
 }
