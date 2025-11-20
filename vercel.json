@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/yono",
+      "dest": "/public/index.html"
+    },
+    {
+      "src": "/yono/",
+      "dest": "/public/index.html"
+    },
+    {
+      "src": "/yono/about-us",
+      "dest": "/public/about-us.html"
+    },
+    {
+      "src": "/yono/privacy-policy",
+      "dest": "/public/privacy-policy.html"
+    },
+    {
+      "src": "/yono/disclaimer",
+      "dest": "/public/disclaimer.html"
+    },
+    {
+      "src": "/yono/(.*)",
+      "dest": "/public/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ]
+}
+
