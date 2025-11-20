@@ -4,12 +4,28 @@ Allow: /
 # Sitemap
 Sitemap: https://rummygamesapp.com/yono/sitemap.xml
 
+# Allow all important resources
+Allow: /yono/
+Allow: /yono/resources/
+Allow: /yono/style.css
+Allow: /yono/script.js
+Allow: /yono/about-us
+Allow: /yono/privacy-policy
+Allow: /yono/disclaimer
+
+# Crawl-delay (optional - helps prevent server overload)
+Crawl-delay: 1
+
 # Disallow admin or private areas if any
 # Disallow: /admin/
 # Disallow: /private/
 
-# Allow important resources
-Allow: /resources/
-Allow: /style.css
-Allow: /script.js
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
 
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

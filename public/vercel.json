@@ -39,6 +39,10 @@
     {
       "source": "/yono/sitemap.xml",
       "destination": "/sitemap.xml"
+    },
+    {
+      "source": "/yono/robots.txt",
+      "destination": "/robots.txt"
     }
   ],
   "headers": [
