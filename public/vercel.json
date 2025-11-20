@@ -19,6 +19,26 @@
     {
       "source": "/yono/disclaimer",
       "destination": "/disclaimer.html"
+    },
+    {
+      "source": "/yono/resources/:path*",
+      "destination": "/resources/:path*"
+    },
+    {
+      "source": "/yono/style.css",
+      "destination": "/style.css"
+    },
+    {
+      "source": "/yono/script.js",
+      "destination": "/script.js"
+    },
+    {
+      "source": "/yono/robots.txt",
+      "destination": "/robots.txt"
+    },
+    {
+      "source": "/yono/sitemap.xml",
+      "destination": "/sitemap.xml"
     }
   ],
   "headers": [
