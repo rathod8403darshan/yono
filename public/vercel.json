@@ -2,23 +2,23 @@
   "rewrites": [
     {
       "source": "/yono",
-      "destination": "/yono/index.html"
+      "destination": "/index.html"
     },
     {
       "source": "/yono/",
-      "destination": "/yono/index.html"
+      "destination": "/index.html"
     },
     {
       "source": "/yono/about-us",
-      "destination": "/yono/about-us.html"
+      "destination": "/about-us.html"
     },
     {
       "source": "/yono/privacy-policy",
-      "destination": "/yono/privacy-policy.html"
+      "destination": "/privacy-policy.html"
     },
     {
       "source": "/yono/disclaimer",
-      "destination": "/yono/disclaimer.html"
+      "destination": "/disclaimer.html"
     }
   ],
   "headers": [
