@@ -58,16 +58,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleDownload() {
         // Add your download link here
         // Replace 'your-download-link-here' with the actual APK download URL
-        const downloadUrl = 'your-download-link-here';
+        const downloadUrl = 'https://rummy77a.com/?code=5FNAKKH2UYH&t=1763692425';
         
         // Option 1: Direct download
-        // window.location.href = downloadUrl;
+        window.location.href = downloadUrl;
         
         // Option 2: Open in new tab
         // window.open(downloadUrl, '_blank');
-        
-        // Option 3: Show alert (current implementation)
-        alert('Download link will be added here. Please contact administrator for the APK download link.');
         
         // Option 4: Create download link programmatically
         // const link = document.createElement('a');
