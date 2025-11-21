@@ -8,7 +8,7 @@
     <!-- Homepage - Highest Priority -->
     <url>
         <loc>https://rummygamesapp.com/yono/</loc>
-        <lastmod>2025-01-27</lastmod>
+        <lastmod>2025-01-28</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
@@ -21,7 +21,7 @@
     <!-- About Us -->
     <url>
         <loc>https://rummygamesapp.com/yono/about-us</loc>
-        <lastmod>2025-01-27</lastmod>
+        <lastmod>2025-01-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -29,7 +29,7 @@
     <!-- Privacy Policy -->
     <url>
         <loc>https://rummygamesapp.com/yono/privacy-policy</loc>
-        <lastmod>2025-01-27</lastmod>
+        <lastmod>2025-01-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -37,7 +37,7 @@
     <!-- Disclaimer -->
     <url>
         <loc>https://rummygamesapp.com/yono/disclaimer</loc>
-        <lastmod>2025-01-27</lastmod>
+        <lastmod>2025-01-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
