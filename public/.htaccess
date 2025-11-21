@@ -43,7 +43,23 @@ DirectoryIndex index.html
     ExpiresByType image/webp "access plus 1 year"
     ExpiresByType text/css "access plus 1 month"
     ExpiresByType application/javascript "access plus 1 month"
+    # HTML files - no cache for immediate UI updates
     ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# Explicit no-cache headers for HTML files
+<IfModule mod_headers.c>
+    # HTML files - no cache
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+    
+    # Long cache for static assets
+    <FilesMatch "\.(css|js|jpg|jpeg|png|gif|webp|svg|ico|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
 </IfModule>
 
 # Security headers
